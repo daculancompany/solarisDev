@@ -2,8 +2,10 @@
   "name": "simple-reactjs-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
-  "homepage": "http://aaronphillips929.github.io/solarisdev",
+  "engines" : {
+      "node" : "10.16.2",
+      "npm" : "6.9.0"
+  },
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
