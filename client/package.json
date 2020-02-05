@@ -9,7 +9,7 @@
     "@emotion/styled": "^10.0.27",
     "@emotion/styled.macro": "^0.10.6",
     "animate.css": "^3.7.2",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "babel-install": "^2.1.0",
     "babel-plugin-macros": "^2.8.0",
     "emotion": "^10.0.27",
