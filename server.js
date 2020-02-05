@@ -20,9 +20,9 @@ app.use(bodyParser.json())
 // Define any API routes before this runs
 //res.sendFile(path.join(__dirname, "./client/build/index.html"));
 //res.sendFile(path.join(__dirname, "./html/index.html"));
-/*app.get("*", (req, res) => {
+app.get("*", (req, res) => {
    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});*/
+});
 
 app.get('/api/test', (req, res) => {
      res.json("test data");
