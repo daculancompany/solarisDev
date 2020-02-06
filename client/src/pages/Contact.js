@@ -130,7 +130,7 @@ class Contact extends Component {
                             <div className="abouttitle">
                                 <h2>
                                     <strong>
-                                        <center>Let's Talksrrr</center>
+                                        <center>Let's Talk</center>
                                     </strong>
                                 </h2>
                             </div>

@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 }*/
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+//app.use(express.static(path.join(__dirname, 'client/build')));
 
 
 app.get('/api/test', (req, res) => {
@@ -25,7 +25,7 @@ app.get('/api/test', (req, res) => {
 }); 
 
 
-app.post('/api/createContact', (req, res) => {
+/*app.post('/api/createContact', (req, res) => {
     const nodemailer = require('nodemailer');
     const sgMail = require('@sendgrid/mail');
     let email = 'aaron.phillips929@gmail.com'; // //niel.daculan@gmail.com , aaron.phillips929@gmail.com
@@ -43,13 +43,13 @@ app.post('/api/createContact', (req, res) => {
     sgMail.send(msg);
     res.json(200);
 });
-
+*/
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
-app.get('*', (req, res) => {
+/*app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
+});*/
 
 
 const port = process.env.PORT || 3001;
