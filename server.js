@@ -15,20 +15,6 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-
-// Serve static files from the React app
-//app.use(express.static(path.join(__dirname, 'client/build')));
-
-// Send every other request to the React app
-// Define any API routes before this runs
-//res.sendFile(path.join(__dirname, "./client/build/index.html"));
-//res.sendFile(path.join(__dirname, "./html/index.html"));
-app.get("*", (req, res) => {
-   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
-
-
-
 app.get('/api/test', (req, res) => {
      res.json("test data");
 }); 
@@ -52,6 +38,22 @@ app.post('/api/createContact', (req, res) => {
     sgMail.send(msg);
     res.json(200);
 });
+
+
+
+// Serve static files from the React app
+//app.use(express.static(path.join(__dirname, 'client/build')));
+
+// Send every other request to the React app
+// Define any API routes before this runs
+//res.sendFile(path.join(__dirname, "./client/build/index.html"));
+//res.sendFile(path.join(__dirname, "./html/index.html"));
+app.get("*", (req, res) => {
+   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
+
+
 
 
 
