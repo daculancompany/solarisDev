@@ -11,9 +11,9 @@ app.use(bodyParser.json())
 
 
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
+/*if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-}
+}*/
 
 app.get('/api/test', (req, res) => {
      res.json("test data");
@@ -46,11 +46,12 @@ app.post('/api/createContact', (req, res) => {
 
 // Send every other request to the React app
 // Define any API routes before this runs
-//res.sendFile(path.join(__dirname, "./client/build/index.html"));
-//res.sendFile(path.join(__dirname, "./html/index.html"));
-app.get("*", (req, res) => {
+res.sendFile(path.join(__dirname, "./client/build/index.html"));
+res.sendFile(path.join(__dirname, "./html/index.html"));
+
+/*app.get("*", (req, res) => {
    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+});*/
 
 
 
