@@ -11,13 +11,13 @@ app.use(bodyParser.json())
 
 
 // Serve up static assets (usually on heroku)
-/*if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-*/
+
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+//app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Send every other request to the React app
 // Define any API routes before this runs
